@@ -1,5 +1,3 @@
-
-
 public class UsingRunnable implements Runnable
 {
     String owner;
@@ -15,7 +13,7 @@ public class UsingRunnable implements Runnable
             for (int i = 0; i < 10; i++) 
             {
                 System.out.println(owner+"Running at i= "+i);
-                Thread.sleep(10000);
+                Thread.sleep(1000);
             }
         }
         catch(Exception e)
