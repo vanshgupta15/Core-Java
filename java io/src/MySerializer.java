@@ -1,4 +1,4 @@
-public class Serializer 
+public class MySerializer 
 {
     public static void main(String[] args) {
         Address address = new Address("123 Main St", "Springfield", "IL", "62701");
