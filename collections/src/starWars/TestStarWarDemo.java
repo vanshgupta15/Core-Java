@@ -1,6 +1,6 @@
 package starWars;
 
-public class TestStarWarList 
+public class TestStarWarDemo 
 {
     public static void main(String[] args) {
         // Create a new customer
