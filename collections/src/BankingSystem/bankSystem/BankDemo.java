@@ -1,4 +1,4 @@
-package bankSystem;
+package BankingSystem;
 
 public class BankDemo 
 {
