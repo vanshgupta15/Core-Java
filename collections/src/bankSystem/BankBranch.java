@@ -6,9 +6,9 @@ public class BankBranch extends Bank
 {
     private String branchName;
     private int code;
-    private ArrayList<Address> customerAddress=new ArrayList<>();
+    private ArrayList<Address> branchAddress=new ArrayList<>();
 
-    public void BankBranch(String branchName, int code)
+    public BankBranch(String branchName, int code)
     {
         this.branchName= branchName;
         this.code=code;
@@ -16,7 +16,7 @@ public class BankBranch extends Bank
 
     public void addBranchAddress(Address address)
     {
-        customerAddress.add(address);
+        branchAddress.add(address);
     }
 
     public String getBranchName()
@@ -27,11 +27,16 @@ public class BankBranch extends Bank
     {
         return code;
     }
+    public ArrayList<Address> getAddressList() 
+    {
+        return branchAddress;
+    }
     public String toString()
     {
         return "Bank:"+super.getName()+
         "Licence number: "+super.getLicence()+
         "Branch name: "+branchName+
-        "Branch code: "+code;
+        "Branch code: "+code+
+        "Branch Address"+branchAddress;
     }
 }
