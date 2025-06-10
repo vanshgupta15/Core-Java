@@ -55,7 +55,7 @@ public class Address
                 "street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", pinCode='" + pinCode + '\'' + +
+                ", pinCode='" + pinCode + '\'' + 
                 '}';
     }
 }

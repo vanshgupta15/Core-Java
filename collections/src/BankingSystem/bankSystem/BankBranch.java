@@ -33,16 +33,13 @@ public class BankBranch extends Bank
     {
         return code;
     }
-    public ArrayList<Address> getAddressList() 
-    {
-        return branchAddress;
-    }
     public String toString()
     {
         return "Bank:"+super.getName()+
         "  Licence number: "+super.getLicence()+
         "  Branch name: "+branchName+
         "  Branch code: "+code+
-        "  Branch Address"+branchAddress;
+        "  Branch Address"+branchAddress+
+        "Customers:-\n"+customers;
     }
 }
