@@ -1,4 +1,4 @@
-package BankingSystem;
+package bankingSystem.bankSystem;
 
 public class Address 
 {

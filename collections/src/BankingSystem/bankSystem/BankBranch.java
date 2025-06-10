@@ -1,4 +1,4 @@
-package BankingSystem;
+package bankingSystem.bankSystem;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,8 @@ public class BankBranch extends Bank
 {
     private String branchName;
     private int code;
-    private ArrayList<Address> branchAddress=new ArrayList<>();
+    private ArrayList<Customer> customers=new ArrayList<>();
+    private Address branchAddress;
 
     public BankBranch(String branchName, int code)
     {
@@ -14,9 +15,14 @@ public class BankBranch extends Bank
         this.code=code;
     }
 
-    public void addBranchAddress(Address address)
+    public void addCustomer(Customer customer)
     {
-        branchAddress.add(address);
+        customers.add(customer);
+    }
+
+    public void setBranchAddress(Address branchAddress)
+    {
+        this.branchAddress=branchAddress;
     }
 
     public String getBranchName()
@@ -34,9 +40,9 @@ public class BankBranch extends Bank
     public String toString()
     {
         return "Bank:"+super.getName()+
-        "Licence number: "+super.getLicence()+
-        "Branch name: "+branchName+
-        "Branch code: "+code+
-        "Branch Address"+branchAddress;
+        "  Licence number: "+super.getLicence()+
+        "  Branch name: "+branchName+
+        "  Branch code: "+code+
+        "  Branch Address"+branchAddress;
     }
 }

@@ -1,4 +1,4 @@
-package BankingSystem;
+package bankingSystem.bankSystem;
 
 import java.util.ArrayList;
 
@@ -42,8 +42,8 @@ public class Customer
     public String toString()
     {
         return "Name: "+name+
-        "Account number: "+accountNumber+
-        "Balance: "+balance+
-        "Address: "+customerAddress;
+        "  Account number: "+accountNumber+
+        "  Balance: "+balance+
+        "  Address: "+customerAddress;
     }
 }

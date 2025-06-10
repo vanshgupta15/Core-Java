@@ -1,4 +1,4 @@
-package BankingSystem;
+package bankingSystem.bankSystem;
 
 public class BankDemo 
 {
@@ -8,11 +8,13 @@ public class BankDemo
         
         BankBranch mainBranch= new BankBranch("Main branch",001);
         Address mainbranch = new Address("Convent road", "Dehradun", 248001, "Uttrakhand"); 
-        mainBranch.addBranchAddress(mainbranch);
+        mainBranch.setBranchAddress(mainbranch);
 
         Customer vansh= new Customer("Vansh Gupta",465234432,532423.50);
         Address vanshaddress= new Address("Laxman Chowk", "Dehradun", 248001, "Uttrakhand");
         vansh.addCustomerAddress(vanshaddress);
+        mainBranch.addCustomer(vansh);
+        
 
         System.out.println(mainBranch);
         System.out.println(vansh);
