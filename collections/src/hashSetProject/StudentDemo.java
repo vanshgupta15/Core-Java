@@ -1,12 +1,9 @@
 package hashSetProject;
-
 import java.util.HashSet;
-
 public class StudentDemo 
 {
     public static void main(String[] args) 
     {
-        Student class[]=new Student[50];
         Student s1  = new Student("Vansh Gupta", 19, 95, 1);
         Student s2  = new Student("Aarav Sharma", 20, 88, 2);
         Student s3  = new Student("Ananya Roy", 18, 91, 3);
@@ -57,10 +54,21 @@ public class StudentDemo
         Student s48 = new Student("Aarav Sharma", 21, 79, 48); // repeated
         Student s49 = new Student("Megha Singh", 21, 93, 49);  // repeated
         Student s50 = new Student("Aditya Jain", 20, 90, 50);  // repeated
+        Student[] studentClass = {s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20,
+    s21, s22, s23, s24, s25, s26, s27, s28, s29, s30,s31, s32, s33, s34, s35, s36, s37, s38, s39, s40,s41, 
+    s42, s43, s44, s45, s46, s47, s48, s49, s50};
+        
 
-        HashSet<Student> classList= new HashSet<>();
-        classList.addAll(classList);
+        HashSet<String> classList= new HashSet<>();
+        for (int i=0; i<50;i++) 
+        {
+            classList.add((studentClass[i]).getName());  // adds student to set
+        }
 
+        for(String s:classList)
+        {
+            System.out.println(s);
+        }
         
     }
 }
