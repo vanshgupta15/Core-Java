@@ -21,6 +21,7 @@ public class HashMapDemo
 
         //Get a value from the HashMap using a key
         Integer appleValue= hashMap.get("Apple");
+        System.out.println(appleValue);
 
         //size of the HashMap
         System.out.println("Size of the HashMap: "+hashMap.size());
