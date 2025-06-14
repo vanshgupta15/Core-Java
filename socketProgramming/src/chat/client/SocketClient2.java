@@ -1,7 +1,7 @@
 package chat.client;
 import java.io.*;
 import java.net.*;
-public class SocketClient {
+public class SocketClient2 {
 
     public static void main(String[] args) {
         if (args.length < 1) {
@@ -10,7 +10,7 @@ public class SocketClient {
         }
 
         String serverIp = args[0];
-        int port = 12345;
+        int port = 15120;
 
         System.out.println("Connecting to server at " + serverIp + ":" + port);
         try (Socket socket = new Socket(serverIp, port)) {

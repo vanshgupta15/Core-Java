@@ -1,11 +1,11 @@
 package chat.server;
 import java.io.*;
 import java.net.*;
-public class SocketServer {
+public class SocketServer2 {
     public static void main(String[] args) {
         System.out.println("Server started...");
         try {
-            ServerSocket serverSocket = new ServerSocket(12345);
+            ServerSocket serverSocket = new ServerSocket(15120);
             System.out.println("Waiting for client connection...");
 
             Socket socket = serverSocket.accept();
