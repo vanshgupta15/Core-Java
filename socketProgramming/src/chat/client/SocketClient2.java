@@ -1,6 +1,7 @@
 package chat.client;
 import java.io.*;
 import java.net.*;
+
 public class SocketClient2 {
 
     public static void main(String[] args) {
@@ -16,23 +17,28 @@ public class SocketClient2 {
         try (Socket socket = new Socket(serverIp, port)) {
             System.out.println("Connected to server at " + serverIp + ":" + port);
 
+            // Open once outside the loop
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
-            String userMessage;
-            System.out.println("Type your messages:");
-            userMessage = userInput.readLine();
-            out.println(userMessage);
-            System.out.println("Message sent to server.");
-            System.out.println("Waiting for server response...");
-            String response = in.readLine();
-            System.out.println("Server response: " + response);
 
+            while (!userInput.equals("exit"))
+            {
+                System.out.print("Type your message: ");
+                String userMessage = userInput.readLine();
+                
+                out.println(userMessage);  // send message
+                System.out.println("Message sent to server.");
+
+                String response = in.readLine();  // receive response
+                System.out.println("Server response: " + response);
+            }
+
+            in.close();
+            out.close();
         } catch (IOException e) {
             e.printStackTrace();
-
         }
         System.out.println("Connection closed.");
     }
-
 }
