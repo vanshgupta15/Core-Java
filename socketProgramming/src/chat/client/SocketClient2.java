@@ -29,9 +29,12 @@ public class SocketClient2 {
                 
                 out.println(userMessage);  // send message
                 System.out.println("Message sent to server.");
-
                 String response = in.readLine();  // receive response
                 System.out.println("Server response: " + response);
+                if(userMessage.equals("exit"))
+                {
+                    System.exit(0);
+                }
             }
 
             in.close();
