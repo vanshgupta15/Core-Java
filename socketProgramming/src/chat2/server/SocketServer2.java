@@ -28,7 +28,7 @@ public class SocketServer2 {
                 System.out.println("Received: " + inputLine);
                 System.out.print("Type your message: ");
                 String serverMessage = serverInput.readLine();
-                out.println("Server response: " + serverMessage); // use println instead of write+flush
+                out.println("Server response7: " + serverMessage); // use println instead of write+flush
                 System.out.println("Sent response to client.");
             }
 
