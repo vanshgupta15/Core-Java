@@ -15,6 +15,7 @@ public class SocketServer2 {
             // Open once outside the loop
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            BufferedReader serverInput = new BufferedReader(new InputStreamReader(System.in));
             String inputLine;
             while ((inputLine = in.readLine()) != null)
             {                
@@ -25,8 +26,9 @@ public class SocketServer2 {
                 }
 
                 System.out.println("Received: " + inputLine);
-
-                out.println("Echo: " + inputLine); // use println instead of write+flush
+                System.out.print("Type your message: ");
+                String serverMessage = serverInput.readLine();
+                out.println("Echo: " + serverMessage); // use println instead of write+flush
                 System.out.println("Sent response to client.");
             }
 
