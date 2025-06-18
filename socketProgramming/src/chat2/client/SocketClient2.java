@@ -30,7 +30,7 @@ public class SocketClient2 {
                 out.println(userMessage);  // send message
                 System.out.println("Message sent to server.");
                 String response = in.readLine();  // receive response
-                System.out.println("Server response: " + response);
+                System.out.println( response);
                 if(userMessage.equals("exit"))
                 {
                     System.exit(0);
