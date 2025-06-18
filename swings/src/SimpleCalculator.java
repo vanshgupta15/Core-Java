@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
 public class SimpleCalculator extends JFrame 
 {
     private JTextField display;
@@ -99,6 +98,9 @@ public class SimpleCalculator extends JFrame
                 break;
             case "÷":
                 result /= current;
+                break;
+            case "%":
+                result = result*(current/100);
                 break;
         }
 
