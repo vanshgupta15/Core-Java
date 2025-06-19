@@ -229,7 +229,7 @@ public class SocketClientGUI3 extends JFrame {
             try {
                 out.println("exit"); // Politely inform server
             } catch (Exception e) {
-                // PrintWriter methods like println don't throw checked IOExceptions
+                // PrintWriter methods like println don't throw checked  
                 // but can set an error flag.
                 if (out.checkError()) {
                     System.err.println("Error flag set on PrintWriter after attempting to send exit.");

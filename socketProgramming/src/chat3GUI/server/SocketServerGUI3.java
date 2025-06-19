@@ -40,7 +40,7 @@ public class SocketServerGUI3 extends JFrame {
             }
         });
 
-        setSize(500, 400);
+        setSize(450, 350);
         setVisible(true);
         stopButton.setEnabled(false); // Server is not running initially
         messageInput.setEnabled(false); // Can't type until client connects
