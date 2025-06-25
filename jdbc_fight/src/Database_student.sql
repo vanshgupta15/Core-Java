@@ -37,5 +37,4 @@ insert into address(id, lane, street, city, state, student_id)  values(1, "lane 
 insert into address(id, lane, street, city, state, student_id)  values(2, "kali ghaati", "baris wala pahad", "Chennai", "UG", 2);
 
 select * from address;
-
 select * from student s , address a where a.student_id=s.id and s.id =1;

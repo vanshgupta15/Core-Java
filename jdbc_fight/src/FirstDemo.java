@@ -23,7 +23,7 @@ public class FirstDemo {
             System.out.println("Connected to the database successfully!");
             // create statement
             try (Statement stmt = conn.createStatement()) {
-                System.out.println("Creating statement...");
+                System.out.println("Created statement...");
                 // execute SQL statement
                 String sql = "SELECT * FROM student"; // replace with your SQL query
                 System.out.println("Executing query...");
