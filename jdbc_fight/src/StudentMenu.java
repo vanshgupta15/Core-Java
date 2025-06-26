@@ -48,6 +48,7 @@ public class StudentMenu
                             System.out.println("Enter age of the student: ");
                             int age= sc.nextInt();
                             sc.nextLine(); 
+                            //String insertSql="INSERT INTO student (id,age,first,last) VALUES ("+id+","+age+","+first+","+last+");";
                             String insertSql = "INSERT INTO student (id, age, first, last) VALUES (?, ?, ?, ?)";
                             PreparedStatement pstmt = conn.prepareStatement(insertSql);
                             pstmt.setInt(1, id);
