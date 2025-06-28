@@ -34,13 +34,11 @@ public class StudentMenu
                     System.out.println("4. View all students");
                     System.out.println("5. Exit");
                     int choice= sc.nextInt();
+                    sc.nextLine();
                     switch(choice)
                     {
                         case 1:
                         {
-                            System.out.println("Enter student id: ");
-                            int id= sc.nextInt();
-                            sc.nextLine(); 
                             System.out.println("Enter first name of the student: ");
                             String first= sc.nextLine();
                             System.out.println("Enter last name of the student: ");
@@ -48,13 +46,12 @@ public class StudentMenu
                             System.out.println("Enter age of the student: ");
                             int age= sc.nextInt();
                             sc.nextLine(); 
-                            //String insertSql="INSERT INTO student (id,age,first,last) VALUES ("+id+","+age+","+first+","+last+");";
-                            String insertSql = "INSERT INTO student (id, age, first, last) VALUES (?, ?, ?, ?)";
+                            //String insertSql="INSERT INTO student (id,age,first,last) VALUES ("+age+","+first+","+last+");";
+                            String insertSql = "INSERT INTO student (age, first, last) VALUES (?, ?, ?)";
                             PreparedStatement pstmt = conn.prepareStatement(insertSql);
-                            pstmt.setInt(1, id);
-                            pstmt.setInt(2, age);
-                            pstmt.setString(3, first);
-                            pstmt.setString(4, last);
+                            pstmt.setInt(1, age);
+                            pstmt.setString(2, first);
+                            pstmt.setString(3, last);
                             int rowsInserted = pstmt.executeUpdate();
                             System.out.println(rowsInserted + " rows inserted");
                             break;
@@ -68,6 +65,7 @@ public class StudentMenu
                             System.out.println("1. First Name");
                             System.out.println("2. Last Name");
                             System.out.println("3. Age");
+                            System.out.println("4. Id");
                             int updateChoice= sc.nextInt();
                             sc.nextLine(); 
                             String updateSql;
@@ -102,6 +100,18 @@ public class StudentMenu
                                     System.out.println(rowsUpdated + " rows updated");
                                     break;
                                 }
+                                case 4:
+                                {
+                                    System.out.println("Enter new id: ");
+                                    int newId= sc.nextInt();
+                                    sc.nextLine(); 
+                                    updateSql = "UPDATE student SET id = '" + newId + "' WHERE id = " + id + ";";
+                                    int rowsUpdated = stmt.executeUpdate(updateSql);
+                                    System.out.println(rowsUpdated + " rows updated");
+                                    break;
+                                }
+                                default:
+                                System.out.println("Enter a valid input");
                             }
                             break;
                         }
