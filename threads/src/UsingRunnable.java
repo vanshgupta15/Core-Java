@@ -1,5 +1,7 @@
 public class UsingRunnable implements Runnable
 {
+
+    //old style runnable
     String owner;
     UsingRunnable(String own)
     {
