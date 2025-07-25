@@ -133,7 +133,7 @@ If you're also learning Java, feel free to fork this repo, use these exercises, 
 ## 🔗 Stay Connected
 
 🔹 [GitHub Profile](https://github.com/vanshgupta15)  
-🔹 [LinkedIn](https://www.linkedin.com) (https://www.linkedin.com/in/vanshgupta1512/)
+🔹 [LinkedIn](https://www.linkedin.com)((https://www.linkedin.com/in/vanshgupta1512/))
 🔹 Happy to collaborate or help beginners!
 
 ---
